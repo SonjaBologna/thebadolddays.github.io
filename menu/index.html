@@ -1,0 +1,28 @@
+---
+title: Menu
+---
+
+{% assign categories = site.menu_items | group_by: "category" %}
+{% for category in categories %}
+<section id="menu-category-{{ category.name | slugify }}" itemscope="itemscope" itemtype="https://schema.org/MenuSection">
+    <h1 itemprop="name">{{ category.name }}</h1>
+    <ul class="dotleader">
+        {% for item in category.items %}
+        <li itemscope="itemscope" itemtype="https://schema.org/MenuItem">
+            <span itemprop="name">{{ item.title }}</span>
+            <span itemscope="itemscope" itemtype="https://schema.org/Offer">
+                $<span itemprop="price">{{ item.price }}</span>
+                <meta itemprop="priceCurrency" content="USD" />
+            </span><!-- [itemtype="https://schema.org/Offer"] -->
+            {% assign the_content = item.content | strip %}
+            {% if "" != the_content %}<ul>
+                <li itemprop="description">{{ the_content }}</li>
+            </ul>{% endif %}
+            {% if item.diets %}<ul class="diets">{% for diet in item.diets %}
+            <li>({{ diet }})<link itemprop="suitableForDiet" href="https://schema.org/{{ diet | capitalize | replace: " ", "" }}Diet" /></li>
+            {% endfor %}</ul>{% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</section><!-- .menu-section -->
+{% endfor %}

@@ -1,0 +1,119 @@
+/**
+ * @group Variables.
+ */
+:root {
+    --main-color: #333;
+    --accent-color: red;
+}
+
+/**
+ * @group Typography.
+ *
+ * Put @font-face declarations here.
+ */
+@font-face {
+    font-family: calluna-sans;
+    src: url("../fonts/calluna-sans/calluna-sans.woff") format("woff2"),
+         url("../fonts/calluna-sans/calluna-sans.otf") format("opentype");
+    font-style: normal;
+    font-weight: 600;
+}
+
+/**
+ * @group Reset.
+ */
+html,
+body,
+ul,
+ol,
+figure {
+    margin: 0;
+    border: none;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    background: #3a3636;
+    color: var(--main-color);
+    font-family: calluna-sans;
+}
+
+a {
+    color: inherit;
+}
+
+#Masthead {
+    padding: 20px 35px;
+    background: #fff;
+}
+#Masthead h1 {
+    float: left;
+    margin: 0 50px 0 0;
+}
+#Masthead h1 img {
+    width: 300px;
+}
+#Masthead h1 img:hover {
+    filter: hue-rotate(360deg);
+    transition: filter 2s;
+}
+
+#MainNavigation {
+    text-transform: uppercase;
+}
+#MainNavigation li {
+    display: inline-block;
+}
+#MainNavigation a {
+    padding: 0 .75em;
+    line-height: 66px;
+    color: var(--main-color);
+    text-decoration: none;
+}
+#MainNavigation li.current a {
+    color: var(--accent-color);
+}
+
+#ContentWrapper {
+    background: fixed no-repeat url("/static/images/playboy.jpg") center/cover;
+}
+#MainContent {
+    clear: both;
+}
+#MainContent,
+#MainFooter {
+    margin: 0 auto;
+    padding: 3em;
+    max-width: 970px;
+    background: rgba(216, 215, 215, 0.8);
+}
+#MainFooter {
+    text-align: center;
+}
+#MainFooter .u-photo,
+#MainFooter .u-email {
+    display: none;
+}
+
+#press-list li {
+    overflow: auto;
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 15px;
+}
+#press-list li p:first-of-type {
+    font-style: italic;
+}
+#press-list img {
+    float: left;
+    width: 197px;
+    margin: 0 30px 30px 0;
+}
+
+/**
+ * @group Mobile styles.
+ *
+ * Put small-screen styles here.
+ */
+@media screen and (max-width: 500px) {
+}

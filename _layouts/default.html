@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ site.human_language | default: "en" }}"
+      itemscope="itemscope"
+      itemtype="https://schema.org/BarOrPub"
+>
+{% include head.html %}
+<body>
+    <div id="ContentWrapper">
+    {% include masthead.html %}
+    <main id="MainContent">
+        {{ content }}
+    </main>
+    {% include foot.html %}
+    </div>
+<script src="{{ "/static/js/main.js" | relative_url }}"></script>
+</body>
+</html>

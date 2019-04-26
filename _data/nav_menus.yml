@@ -1,0 +1,23 @@
+main:
+  - 
+    url: /
+    text: Home
+  -
+    url: /menu/
+    text: Menu
+    a_extra: itemprop="hasMenu"
+  -
+    url: /happy-hour/
+    text: Happy Hour
+  -
+    url: /events/
+    text: Events
+  -
+    url: /about/
+    text: About
+  -
+    url: /contact/
+    text: Contact
+  -
+    url: /press/
+    text: Press

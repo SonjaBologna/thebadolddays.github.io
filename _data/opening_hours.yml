@@ -1,0 +1,21 @@
+Monday:
+    open: "14:00"
+    close: "04:00"
+Tuesday:
+    open: "14:00"
+    close: "04:00"
+Wednesday:
+    open: "14:00"
+    close: "04:00"
+Thursday:
+    open: "14:00"
+    close: "04:00"
+Friday:
+    open: "14:00"
+    close: "04:00"
+Saturday:
+    open: "14:00"
+    close: "04:00"
+Sunday:
+    open: "14:00"
+    close: "02:00"
