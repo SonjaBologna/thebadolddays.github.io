@@ -37,7 +37,11 @@ time_format: "%l:%M %p"
 # the collection, you can make a page with its own Web address to show
 # the recipe on your Web site.
 collections:
-  - menu_items
+    menu_items:
+    events:
+        output: true
+        permalink: /:collection/:title
+        sort_by: startDate
 
 # RSS feed settings.
 rss:
@@ -55,3 +59,9 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: default
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: events
+    values:
+      layout: event
