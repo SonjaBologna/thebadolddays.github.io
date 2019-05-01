@@ -3,7 +3,7 @@
  */
 :root {
     --main-color: #333;
-    --accent-color: red;
+    --accent-color: #EEE;
 }
 
 /**
@@ -17,6 +17,17 @@
          url("../fonts/calluna-sans/calluna-sans.otf") format("opentype");
     font-style: normal;
     font-weight: 600;
+}
+
+#OpeningHours li {
+    overflow: auto;
+    max-width: 20em;
+}
+#OpeningHours span {
+    float: left;
+}
+#OpeningHours span + span {
+    float: right;
 }
 
 /**
@@ -41,6 +52,10 @@ body {
 
 a {
     color: inherit;
+    transition: color .25s;
+}
+a:hover {
+    color: var(--accent-color);
 }
 
 .icon.calendar {
@@ -133,6 +148,9 @@ a {
 .h-event .event-status {
     display: none;
 }
+.h-event img {
+    max-width: 100%;
+}
 
 /**
  * @group Mobile styles.
@@ -140,4 +158,38 @@ a {
  * Put small-screen styles here.
  */
 @media screen and (max-width: 500px) {
+    #Masthead h1 {
+        float: none;
+        margin-right: 0;
+    }
+    #MainNavigation::before {
+        content: "\2630";
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        color: #000;
+        font-size: 36px;
+        line-height: 1em;
+        cursor: pointer;
+    }
+    #MainNavigation ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s;
+    }
+    #MainNavigation:hover ul {
+        max-height: 75vh;
+        transition: max-height 1s;
+    }
+    #MainNavigation li {
+        display: list-item;
+        padding: 0 .5em;
+        text-align: center;
+    }
+    #MainNavigation a {
+        line-height: 3em;
+    }
+    #press-list img {
+        width: 100%;
+    }
 }
