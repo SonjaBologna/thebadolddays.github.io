@@ -29,13 +29,7 @@ paginate_path: "/blog/page/:num/"
 date_format: "%B %e, %Y"
 time_format: "%l:%M %p"
 
-# Collections.
-#
-# Collections are a Jekyll feature that takes structured data and can
-# render a page for each item in that data structure. For example, you
-# can make a collection of baking recipes and then, for each recipe in
-# the collection, you can make a page with its own Web address to show
-# the recipe on your Web site.
+# Collections metadata.
 collections:
     menu_items:
     events:
@@ -65,3 +59,10 @@ defaults:
       type: events
     values:
       layout: event
+
+# iCalendar settings.
+iCalendar:
+    defaults:
+        location: "Brooklyn, NY"
+        status: CONFIRMED
+        image: event-image-placeholder.jpg
