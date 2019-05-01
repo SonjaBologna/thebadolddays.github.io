@@ -141,15 +141,65 @@ a:hover {
     margin: 0 30px 30px 0;
 }
 
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto 0;
+    align-items: center;
+    justify-content: center;
+}
+#gallery figure {
+    margin: 2em;
+    text-align: center;
+    color: var(--accent-color);
+}
+#gallery img {
+    max-width: calc(100vw - 2em);
+    max-height: 400px;
+}
+#gallery figcaption {
+    opacity: 0;
+    transition: opacity .25s;
+}
+#gallery figure:hover figcaption {
+    opacity: 1;
+}
+
 /**
  * @group Microformats and structured data.
  */
+.h-event {
+    margin-bottom: 4em;
+}
 .h-event .p-location .u-photo,
 .h-event .event-status {
     display: none;
 }
 .h-event img {
     max-width: 100%;
+}
+
+[id^="menu-category-"] h1 {
+    border-bottom: 1px dotted var(--accent-color);
+}
+[id^="menu-category-"] > ul {
+    column-count: 2;
+}
+[id^="menu-category-"] > ul > li {
+    overflow: auto;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    padding: 2em;
+    
+}
+[id^="menu-category-"] > ul > li:nth-child(even) {
+    background-color: rgba(150, 150, 150, .5);
+}
+[id^="menu-category-"] > ul > li:nth-child(odd) {
+    background-color: rgba(200, 200, 200, .5);
+}
+[id^="menu-category-"] [itemtype="https://schema.org/Offer"] {
+    float: right;
 }
 
 /**
@@ -191,5 +241,15 @@ a:hover {
     }
     #press-list img {
         width: 100%;
+    }
+    #gallery {
+        display: block;
+        text-align: center;
+    }
+    #gallery figure {
+        margin: 2em 0;
+    }
+    [id^="menu-category-"] > ul {
+        column-count: 1;
     }
 }

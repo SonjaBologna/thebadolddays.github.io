@@ -12,7 +12,7 @@ title: Contact
 
 {% include hours.html %}
 
-[Happy Hour]({{ "/happy-hour/" | relative_url }} "View our Happy Hour menu") everyday until 8pm!
+[Happy Hour]({{ "/menu/#menu-category-happy-hour" | relative_url }} "View our Happy Hour menu") everyday until 8pm!
 
 # Contact Us
 

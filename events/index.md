@@ -4,7 +4,7 @@ title: Events
 
 # Upcoming events
 
-[<img alt="" src="{{ "/static/images/icon.calendar.svg" | relative_url }}" class="calendar icon" />](webcal:{{ "/events/all.ics" | relative_url }} "Subscribe to our calendar.")
+[<img alt="" src="{{ "/static/images/icon.calendar.svg" | relative_url }}" class="calendar icon" />]({{ "/events/all.ics" | absolute_url | replace: "https:", "webcal:" | replace: "http:", "webcal:" }} "Subscribe to our calendar.")
 [Subscribe to our calendar]({{ "/events/all.ics" | absolute_url }}).
 
 {% if site.events %}

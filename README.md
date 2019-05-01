@@ -118,7 +118,7 @@ collections:
 
 When discussing the `output` setting of the `events` collection, we refer to it as the `collections.events.output` setting. Since the `events` part of the setting is dependent on the name of the collection, this is replaced with `:collection`.
 
-All collection settings are optional. Refer to [the Jekyll documentation on Collections](https://jekyllrb.com/docs/collections/) details about the available settings. 
+All collection settings are optional. Refer to [the Jekyll documentation on Collections](https://jekyllrb.com/docs/collections/) details about the available settings.
 
 For example, to define two collections, `menu_items` and `events`, where the `events` collection has a custom permalink structure and individual pages for each item (event) in the collection, write a `collections` object as follows:
 

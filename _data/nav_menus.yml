@@ -7,7 +7,7 @@ main:
     text: Menu
     a_extra: itemprop="hasMenu"
   -
-    url: /happy-hour/
+    url: /menu/#menu-category-happy-hour
     text: Happy Hour
   -
     url: /events/

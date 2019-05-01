@@ -6,7 +6,10 @@ title: Menu
 {% for category in categories %}
 <section id="menu-category-{{ category.name | slugify }}" itemscope="itemscope" itemtype="https://schema.org/MenuSection">
     <h1 itemprop="name">{{ category.name }}</h1>
-    <ul class="dotleader">
+    {% if site.data.menu_categories contains category.name %}
+    {{ site.data.menu_categories[category.name] | markdownify }}
+    {% endif %}
+    <ul>
         {% for item in category.items %}
         <li itemscope="itemscope" itemtype="https://schema.org/MenuItem">
             <span itemprop="name">{{ item.title }}</span>
