@@ -175,8 +175,19 @@ a:hover {
 .h-event .event-status {
     display: none;
 }
+.h-event header > a {
+    display: block;
+    text-align: center;
+}
 .h-event img {
     max-width: 100%;
+    max-height: 400px;
+    border-radius: 2em;
+    box-shadow: 0 0 50px black;
+}
+.h-event img[src$="placeholder.jpg"] {
+    border-radius: 0;
+    box-shadow: none;
 }
 
 [id^="menu-category-"] h1 {
