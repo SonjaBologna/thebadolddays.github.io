@@ -175,6 +175,11 @@ a:hover {
 .h-event .event-status {
     display: none;
 }
+.h-event .p-street-address::after,
+.h-event .p-locality::after,
+.h-event .p-postal-code::after {
+    content: ",";
+}
 .h-event header > a {
     display: block;
     text-align: center;
